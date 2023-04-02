@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header h1 {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+main .cards-container {
+  position: relative;
+  overflow-x: auto;
+  width: 100%;
+  max-width: 128rem;
+  margin: 0 auto;
+}
+main .cards-container .m-productTile__container {
+  display: flex;
+  gap: 20rem;
+  background-color: #fff;
+  width: 20%;
+}
+main .cards-container .m-productTile__container .product-card {
+  display: flex;
+  flex-direction: column;
+  width: 63.6363%;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+  padding: 5.3719% 0;
+}
+main .cards-container .m-productTile__container .product-card .m-productTile__previewContainer {
+  margin: 5% auto 5%;
+  width: 135.53px;
+  height: 135.53px;
+  overflow: hidden;
+  position: relative;
+}
+main .cards-container .m-productTile__container .product-card .m-productTile__previewContainer img {
+  width: 135.53px;
+  height: auto;
+  position: relative;
+}
+main .cards-container .m-productTile__container .product-card .m-productTile__previewContainer span {
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 14.4px;
+  padding: 0.2rem 0.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+main .cards-container .m-productTile__container .product-card .product-info .product-marca {
+  color: #767676;
+  text-transform: uppercase;
+  line-height: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 12rem;
+  margin-bottom: 0.5rem;
+}
+main .cards-container .m-productTile__container .product-card .product-info .producto-description {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #4a4a4a;
+  height: 3.4rem;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+}
+main .cards-container .m-productTile__container .product-card .producto-precioActual {
+  margin-top: 0;
+  line-height: 1.3rem;
+  min-width: 7.3125rem;
+  font-size: 1.5rem;
+  text-align: left;
+  color: #717171;
+}
+main .cards-container .m-productTile__container .product-card .producto-precioSecundario {
+  height: initial;
+  line-height: 1.2rem;
+  color: #d35b36;
+  font-size: 1.4rem;
+}
+main .cards-container .m-productTile__container .product-card .button-calcular-descuento {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(18, 18, 96, 0.5);
+  color: white;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  padding: 10px 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+main .cards-container .m-productTile__container .product-card .button-calcular-descuento:hover {
+  opacity: 1;
+}
+main .cards-container .m-productTile__container .product-card .product-card:hover {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,53 @@
+{
+    "productos": [
+        {
+            "marca": "Thomas",
+            "descripcion": "Cafeteria Thomas",
+            "precioActual": "29.990",
+            "precioSecundario": "",
+            "descuento": "25",
+            "imagen": "https://falabella.scene7.com/is/image/Falabella/15171329_1?wid=180"
+        },
+        {
+            "marca": "Xiaomi",
+            "descripcion": " Parlante Xioami Mi Compact Bluetooth",
+            "precioActual": "14.990",
+            "precioSecundario":"",
+            "descuento": "33",
+            "imagen": "https://falabella.scene7.com/is/image/Falabella/gsc_117252542_1721189_1?wid=180"
+        },
+        {
+            "marca": "LHOTSE",
+            "descripcion": "Smarth Watch blue",
+            "precioActual": "99.990",
+            "precioSecundario": "",
+            "descuento": "50",
+            "imagen": "https://falabella.scene7.com/is/image/Falabella/8524439_1?wid=180"
+        },
+        {
+            "marca": "Osoji",
+            "descripcion": "Aspiradora Robot Osoji Dojo San 870",
+            "precioActual": "89.990",
+            "precioSecundario": "",
+            "descuento": "59",
+            "imagen": "https://falabella.scene7.com/is/image/Falabella/6859718_1?wid=180"
+        },
+        {
+            "marca": "Apple",
+            "descripcion": "Apple Macbook Pro 13 i5 8GB RAM 512GB SSD",
+            "precioActual": "299.990",
+            "precioSecundario": "",
+            "descuento": "50",
+            "imagen": "https://falabella.scene7.com/is/image/Falabella/gsc_115555379_1168694_1?wid=180"
+        },
+        {
+            "marca": "Amazon",
+            "descripcion": "Amazon Alexa",
+            "precioActual": "19.990",
+            "precioSecundario": "",
+            "descuento": "34",
+            "imagen": "https://falabella.scene7.com/is/image/Falabella/110084722_1?wid=180"
+        }
+    ]
+}
+
