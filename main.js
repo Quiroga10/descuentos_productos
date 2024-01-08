@@ -10,15 +10,21 @@ fetch('./productos.json')
 
         // Para cada producto en el JSON, crear un elemento HTML y agregarlo al contenedor
         data.forEach(productos => {
-            const card = document.createElement('div');
-            card.className = 'product-card';
 
-            const previewContainer = document.createElement('div');
-            previewContainer.className = 'm-productTile__previewContainer';
+            function crearProductCard(clases) {
+                const card = document.createElement('div');
+                card.className = clases;
+                return card;
+            }
+            
+            const card = crearProductCard('producto-card')
+
+            const previewContainer = crearProductCard('m-productTile__previewContainer');
             const img = document.createElement('img');
             img.src = productos.imagen;
             img.alt = productos.descripcion;
             previewContainer.appendChild(img);
+            card.appendChild(previewContainer);
 
             const discount = document.createElement('span');
             discount.className = 'carousel_badge__discount';
