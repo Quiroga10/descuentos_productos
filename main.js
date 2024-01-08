@@ -60,16 +60,18 @@ fetch('./productos.json')
 
             function calcularDescuento(event){
                 event.preventDefault();
-                //elimina el resultado anterior
-                if(ultimoButton !== null){
-                    const card = ultimoButton.closest('.product-card');
-                    const precioSecundario = card.querySelector('.producto-precioSecundario');
-                    precioSecundario.innerText = productos.precioSecundario;
-                }
-                const resultado = (productos.precioActual - (productos.precioActual * (productos.descuento/100))).toFixed(3);
-                precioSecundario.innerText = "Descuento: $ " + resultado;
 
-                //asignar el boton presionado a ultimoButton
+                // Almacenar el precio secundario original
+                const producto = event.target.closest('.product-card');
+                const precioSecundarioOriginal = producto.querySelector('.producto-precioSecundario').innerText;
+            
+                // Calcular el descuento
+                const resultado = (productos.precioActual - (productos.precioActual * (productos.descuento/100))).toFixed(3);
+            
+                // Actualizar el precio secundario
+                producto.querySelector('.producto-precioSecundario').innerText = "Descuento: $ " + resultado;
+            
+                // Actualizar la variable `ultimoButton`
                 ultimoButton = event.target;
             }
             containerPreview.appendChild(card);
