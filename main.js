@@ -10,21 +10,15 @@ fetch('./productos.json')
 
         // Para cada producto en el JSON, crear un elemento HTML y agregarlo al contenedor
         data.forEach(productos => {
+            const card = document.createElement('div');
+            card.className = 'product-card';
 
-            function crearProductCard(clases) {
-                const card = document.createElement('div');
-                card.className = clases;
-                return card;
-            }
-            
-            const card = crearProductCard('producto-card')
-
-            const previewContainer = crearProductCard('m-productTile__previewContainer');
+            const previewContainer = document.createElement('div');
+            previewContainer.className = 'm-productTile__previewContainer';
             const img = document.createElement('img');
             img.src = productos.imagen;
             img.alt = productos.descripcion;
             previewContainer.appendChild(img);
-            card.appendChild(previewContainer);
 
             const discount = document.createElement('span');
             discount.className = 'carousel_badge__discount';
@@ -66,18 +60,16 @@ fetch('./productos.json')
 
             function calcularDescuento(event){
                 event.preventDefault();
-
-                // Almacenar el precio secundario original
-                const producto = event.target.closest('.product-card');
-                const precioSecundarioOriginal = producto.querySelector('.producto-precioSecundario').innerText;
-            
-                // Calcular el descuento
+                //elimina el resultado anterior
+                if(ultimoButton !== null){
+                    const card = ultimoButton.closest('.product-card');
+                    const precioSecundario = card.querySelector('.producto-precioSecundario');
+                    precioSecundario.innerText = productos.precioSecundario;
+                }
                 const resultado = (productos.precioActual - (productos.precioActual * (productos.descuento/100))).toFixed(3);
-            
-                // Actualizar el precio secundario
-                producto.querySelector('.producto-precioSecundario').innerText = "Descuento: $ " + resultado;
-            
-                // Actualizar la variable `ultimoButton`
+                precioSecundario.innerText = "Descuento: $ " + resultado;
+
+                //asignar el boton presionado a ultimoButton
                 ultimoButton = event.target;
             }
             containerPreview.appendChild(card);
